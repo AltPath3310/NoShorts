@@ -1,0 +1,10 @@
+{
+	"name": "No Shorts",
+	"description": "Hide youtube shorts from sidebar and home, block the ability to enter them",
+	"version": "0.0.1",
+	"manifest_version": 3,
+	"icons": {},
+	"action": {},
+	"permissions": [],
+	"background": {}
+}
