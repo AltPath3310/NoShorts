@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
+:root {
+	--platinum: #e5e5e52d;
+	--tang-blue: #065fd4;
+}
+
+body {
+	width: 350px;
+	height: 350px;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", serif;
+	user-select: none;
+}
+
+.short-hr {
+	width: 300px;
+	margin: 0 auto 0 auto;
+	border-color: var(--platinum);
+}
+
+.header__inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 84px;
+}
+
+.header__logo {
+	width: 48px;
+	height: 48px;
+}
+
+.header-logo__text {
+	font-size: 24px;
+	font-family: "League Gothic";
+	font-weight: 500;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 36px;
+	height: 188px;
+	overflow-y: auto;
+}
+
+.action-item {
+	display: flex;
+}
+
+.action-item__checkbox {
+	opacity: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.action-item__toggle {
+	position: relative;
+	display: inline-block;
+	width: 36px;
+	height: 14px;
+	background-color: #ccc;
+	border-radius: 25px;
+	margin-right: 16px;
+}
+
+.action-item__toggle::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50%;
+	transition: transform 0.1s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.action-item__checkbox:checked + .action-item__toggle::before {
+	background-color: var(--tang-blue);
+	transform: translateX(16px);
+}
+
+.footer__inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
