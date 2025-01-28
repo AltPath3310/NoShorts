@@ -4,6 +4,8 @@
 		<meta charset="UTF-8" />
 		<title>No Shorts</title>
 		<link rel="stylesheet" href="popup.css" />
+		<script src="popup.js" defer></script>
+		<script src="lib/browser-polyfill.min.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -20,7 +22,11 @@
 		<div class="content">
 			<div class="action-item">
 				<label>
-					<input type="checkbox" class="action-item__checkbox" />
+					<input
+						type="checkbox"
+						class="action-item__checkbox"
+						id="hide-shorts-toggle"
+					/>
 					<span class="action-item__toggle"></span>
 				</label>
 				<span>Hide & Block All Shorts</span>

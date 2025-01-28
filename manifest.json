@@ -12,6 +12,22 @@
 	"action": {
 		"default_popup": "popup.html"
 	},
-	"permissions": [],
-	"background": {}
+	"permissions": ["storage"],
+
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.youtube.com/",
+				"https://www.youtube.com/*"
+			],
+			"js": [
+				"lib/browser-polyfill.min.js",
+				"inject_scripts/styles_inject.js"
+			]
+		},
+		{
+			"matches": ["https://www.youtube.com/shorts/*"],
+			"js": ["lib/browser-polyfill.min.js", "inject_scripts/inject.js"]
+		}
+	]
 }
