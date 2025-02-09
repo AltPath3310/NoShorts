@@ -11,6 +11,10 @@ function injectCSS() {
 			display: none !important;
 		}
 		
+		yt-horizontal-list-renderer[should-use-shorts-list-height] {
+			display: none !important;
+		}
+		
 		[chip-shape-data*='"text":"Shorts"'] {
 			display: none !important;
 		}
